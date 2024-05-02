@@ -1,0 +1,57 @@
+/* .font-inter {
+  font-family: 'Inter var';
+}
+
+.font-epilogue {
+  font-family: Epilogue, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.font-cn {
+  font-family: 'FZHei-B01 Regular', sans-serif;
+}
+
+.font-playfair {
+  font-family: Playfair, serif;
+}
+
+.font-garamond {
+  font-family: 'EB Garamond', serif;
+} */
+
+.font-sofia {
+  font-family: "Sofia Pro", Helvetica, sans-serif;
+}
+
+/* .font-cn {
+  font-family: 'Ma Shan Zheng', cursive;
+} */
+
+/* Select styling */
+
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+
+/* Hide Scrollbars */
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* .dark {
+  text-shadow: #14142e 0 0 5px;
+} */

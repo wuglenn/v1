@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+
+  h4 {
+    @apply text-lg;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-medium;
+  }
+
+  /* ul {
+    @apply list-disc ms-4;
+  } */
+
+  ol {
+    @apply list-disc ms-4;
+  }
+
+  label {
+    @apply font-semibold;
+  }
+
+  .form-text-label {
+    @apply block text-sm font-semibold leading-6;
+  }
+
+  .form-text-input-field {
+    @apply block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6;
+  }
+
+  .form-text-input-field-dark {
+    @apply block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset ring-gray-800 placeholder:text-gray-600 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6 text-white bg-neutral-950 bg-opacity-40;
+  }
+}
+
+.tooltip {
+  @apply invisible absolute;
+}
+
+.has-tooltip:hover .tooltip {
+  @apply visible z-50;
+}
+
+.text-shadow-none {
+  text-shadow: none !important;
+}
+
+.text-shadow {
+  text-shadow: #14142e 0 0 5px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
