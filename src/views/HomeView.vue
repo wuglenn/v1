@@ -61,30 +61,17 @@ onUnmounted(() => {
     <div class="text-theme-950 dark:text-theme-500" id="content">
       <div class="relative flex items-center justify-center">
         <div
-          class="lg:w-[800px] xl:w-[1150px] flex flex-col lg:flex-row lg:items-start items-center justify-center min-h-screen"
-        >
+          class="lg:w-[800px] xl:w-[1150px] flex flex-col lg:flex-row lg:items-start items-center justify-center min-h-screen">
           <div class="w-full lg:w-1/2 lg:sticky top-0 lg:h-screen lg:min-w-[400px]">
             <div
-              class="mt-10 lg:mt-[100px] relative dark:text-purple-50 lg:px-0 max-w-[600px] lg:max-w-full px-6 sm:px-8"
-            >
+              class="mt-10 lg:mt-[100px] relative dark:text-purple-50 lg:px-0 max-w-[600px] lg:max-w-full px-6 sm:px-8">
               <PersonalSection />
               <menu class="hidden lg:block text-base tracking-wide mt-10">
                 <!-- <NavLink text="About" class="" :isClicked="currentSection === 'about'" @click="onClick('about')" /> -->
-                <NavLink
-                  text="Experience"
-                  :isClicked="currentSection === 'experience'"
-                  @click="onClick('experience')"
-                />
-                <NavLink
-                  text="Education"
-                  :isClicked="currentSection === 'education'"
-                  @click="onClick('education')"
-                />
-                <NavLink
-                  text="Projects"
-                  :isClicked="currentSection === 'projects'"
-                  @click="onClick('projects')"
-                />
+                <NavLink text="Experience" :isClicked="currentSection === 'experience'"
+                  @click="onClick('experience')" />
+                <NavLink text="Education" :isClicked="currentSection === 'education'" @click="onClick('education')" />
+                <NavLink text="Projects" :isClicked="currentSection === 'projects'" @click="onClick('projects')" />
               </menu>
               <div class="block lg:hidden text-4xl mt-6">
                 <SocialLinks justify="start" />
@@ -104,10 +91,9 @@ onUnmounted(() => {
 
           <div
             class="w-full mt-10 lg:mt-[100px] lg:w-1/2 px-4 lg:px-0 max-w-[600px] min-w-[400px] lg:min-w-[500px] lg:max-w-full"
-            id="scrollPage"
-          >
+            id="scrollPage">
             <div id="about" class="text-base sm:text-lg">
-              <AboutSection class="px-2 sm:px-4" />
+              <AboutSection @scroll-to-section="scrollToSection" class="px-2 sm:px-4" />
             </div>
             <div id="experience" class="mt-6 sm:mt-16 lg:mt-32 text-lg">
               <JobSection />
@@ -129,22 +115,14 @@ onUnmounted(() => {
             <footer class="mt-10 lg:mt-28 mb-[50px] px-4">
               <div>
                 Built from scratch with
-                <span
-                  class="text-theme-700 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300"
-                >
+                <span class="text-theme-700 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300">
                   <a href="https://vuejs.org/" target="_blank">Vue.js</a>
                 </span>
                 and
-                <span
-                  class="text-theme-700 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300"
-                >
-                  <a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a> </span
-                >, deployed with
-                <span
-                  class="text-theme-700 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300"
-                >
-                  <a href="https://vercel.com/" target="_blank">Vercel</a> </span
-                >.
+                <span class="text-theme-700 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300">
+                  <a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a> </span>, deployed with
+                <span class="text-theme-700 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300">
+                  <a href="https://vercel.com/" target="_blank">Vercel</a> </span>.
               </div>
               <div class="flex gap-1 items-center mt-2 lg:hidden">
                 <FontAwesomeIcon :icon="faCopyright" />Glenn Wu 2024. All rights reserved.
