@@ -42,12 +42,10 @@ const jobCards = ref([
 <template>
   <BaseCardSection :cards="jobCards" />
   <ul
-    class="px-2 sm:px-4 mt-6 font-semibold text-lg lg:text-xl flex flex-col sm:flex-row gap-4 items-start sm:items-center ms-0"
-  >
+    class="px-2 sm:px-4 mt-6 font-semibold text-lg lg:text-xl flex flex-col sm:flex-row gap-4 items-start sm:items-center ms-0">
     <a href="https://linkedin.com/in/glennwuwu" target="_blank">
       <div
-        class="text-theme-950 dark:text-violet-50 dark:hover:text-violet-50/80 transition flex justify-center items-center gap-2 py-2"
-      >
+        class="text-theme-950 dark:text-violet-50 dark:hover:text-violet-50/80 transition flex justify-center items-center gap-2 py-2">
         <span class="underline underline-offset-4 lg:no-underline">Let's connect!</span>
         <FontAwesomeIcon :icon="faLinkedin" class="" />
       </div>
@@ -55,21 +53,10 @@ const jobCards = ref([
     <!-- TODO: Upload resume file -->
     <a href="" target="_blank">
       <div
-        class="text-violet-50 bg-theme-950 dark:text-theme-700 transition px-4 py-2 dark:bg-violet-50 dark:hover:bg-violet-50/80 rounded-full flex justify-center items-center gap-2"
-      >
+        class="text-violet-50 bg-theme-950 dark:text-theme-700 transition px-4 py-2 dark:bg-violet-50 dark:hover:bg-violet-50/80 rounded-full flex justify-center items-center gap-2">
         <span>View Full Resume</span>
         <FontAwesomeIcon :icon="faArrowUpRightFromSquare" class="text-lg lg:text-xl" />
       </div>
     </a>
   </ul>
 </template>
-
-<style scoped>
-.blurred {
-  filter: blur(1px) brightness(50%);
-  /* opacity: 0.5; */
-  transition:
-    filter 0.3s ease,
-    opacity 0.3s ease-out;
-}
-</style>

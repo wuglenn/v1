@@ -42,7 +42,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <menu class="hidden lg:block text-base tracking-wide mt-10">
+  <menu>
     <!-- <NavLink text="About" class="" :isClicked="currentSection === 'about'" @click="onClick('about')" /> -->
     <NavLink text="Experience" :isClicked="currentSection === 'experience'" @click="onClick('experience')" />
     <NavLink text="Education" :isClicked="currentSection === 'education'" @click="onClick('education')" />

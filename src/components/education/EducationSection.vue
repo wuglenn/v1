@@ -40,13 +40,3 @@ const educationCards = ref([
 <template>
   <BaseCardSection :cards="educationCards" />
 </template>
-
-<style scoped>
-.blurred {
-  filter: blur(1px) brightness(50%);
-  /* opacity: 0.5; */
-  transition:
-    filter 0.3s ease,
-    opacity 0.3s ease-out;
-}
-</style>

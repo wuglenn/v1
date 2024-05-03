@@ -131,7 +131,7 @@ onMounted(() => {
         <FontAwesomeIcon
           v-if="website"
           :icon="faLink"
-          class="text-base ms-1 transition"
+          class="text-base ms-1 transition duration-150"
           :class="linkClass"
         />
       </div>

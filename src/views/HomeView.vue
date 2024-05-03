@@ -10,12 +10,9 @@ import MouseCircle from "@/components/ui/MouseCircle.vue";
 
 import SocialLinks from "@/components/SocialLinks.vue";
 import NavBar from "@/components/nav/NavBar.vue";
-// import { onMounted, onUnmounted, ref } from "vue";
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
-
-// const currentSection = ref(null);
 
 const scrollToSection = (section) => {
   const sectionElement = document.querySelector(`#${section}`);
@@ -36,7 +33,7 @@ const scrollToSection = (section) => {
             <div
               class="mt-10 lg:mt-[100px] relative dark:text-purple-50 lg:px-0 max-w-[600px] lg:max-w-full px-6 sm:px-8">
               <PersonalSection />
-              <NavBar @scroll-to-section="scrollToSection" />
+              <NavBar class="hidden lg:block text-base tracking-wide mt-10" @scroll-to-section="scrollToSection" />
               <div class="block lg:hidden text-4xl mt-6">
                 <SocialLinks justify="start" />
               </div>
