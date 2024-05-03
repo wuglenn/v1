@@ -9,17 +9,13 @@ import SpotifyStatus from "@/components/spotify/SpotifyStatus.vue";
 import MouseCircle from "@/components/ui/MouseCircle.vue";
 
 import SocialLinks from "@/components/SocialLinks.vue";
-import NavLink from "@/components/ui/NavLink.vue";
-import { onMounted, onUnmounted, ref } from "vue";
+import NavBar from "@/components/nav/NavBar.vue";
+// import { onMounted, onUnmounted, ref } from "vue";
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 
-const currentSection = ref(null);
-
-const onClick = (section) => {
-  scrollToSection(section);
-};
+// const currentSection = ref(null);
 
 const scrollToSection = (section) => {
   const sectionElement = document.querySelector(`#${section}`);
@@ -28,32 +24,6 @@ const scrollToSection = (section) => {
   }
 };
 
-const updateCurrentSection = () => {
-  const sections = ["about", "experience", "education", "projects"];
-  const scrollPosition = window.scrollY;
-
-  for (const section of sections) {
-    const sectionElement = document.querySelector(`#${section}`);
-    if (sectionElement) {
-      const sectionTop = sectionElement.offsetTop;
-      const sectionHeight = sectionElement.offsetHeight;
-
-      if (scrollPosition >= sectionTop - 400 && scrollPosition < sectionTop + sectionHeight) {
-        currentSection.value = section;
-        break;
-      }
-    }
-  }
-};
-
-onMounted(() => {
-  updateCurrentSection();
-  document.addEventListener("scroll", updateCurrentSection);
-});
-
-onUnmounted(() => {
-  document.removeEventListener("scroll", updateCurrentSection);
-});
 </script>
 
 <template>
@@ -66,13 +36,7 @@ onUnmounted(() => {
             <div
               class="mt-10 lg:mt-[100px] relative dark:text-purple-50 lg:px-0 max-w-[600px] lg:max-w-full px-6 sm:px-8">
               <PersonalSection />
-              <menu class="hidden lg:block text-base tracking-wide mt-10">
-                <!-- <NavLink text="About" class="" :isClicked="currentSection === 'about'" @click="onClick('about')" /> -->
-                <NavLink text="Experience" :isClicked="currentSection === 'experience'"
-                  @click="onClick('experience')" />
-                <NavLink text="Education" :isClicked="currentSection === 'education'" @click="onClick('education')" />
-                <NavLink text="Projects" :isClicked="currentSection === 'projects'" @click="onClick('projects')" />
-              </menu>
+              <NavBar @scroll-to-section="scrollToSection" />
               <div class="block lg:hidden text-4xl mt-6">
                 <SocialLinks justify="start" />
               </div>
