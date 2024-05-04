@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-import twScrollbar from "tailwind-scrollbar";
-
-import defaultTheme from "tailwindcss/defaultTheme";
+// import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
   darkMode: ["variant", [
@@ -10,15 +8,14 @@ export default {
     "&:is(.dark *)",
   ]],
   content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}"],
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./app.vue",
+    "./error.vue",
+  ],
   theme: {
-    screens: {
-      "4xs": "280px",
-      "3xs": "325px",
-      "2xs": "420px",
-      ...defaultTheme.screens,
-    },
     extend: {
       colors: {
         transparent: "transparent",
@@ -49,6 +46,12 @@ export default {
       textShadow: {
         DEFAULT: "#14142e 0 0 5px",
       },
+      screens: {
+        "4xs": "280px",
+        "3xs": "325px",
+        "2xs": "420px",
+        // ...defaultTheme.screens,
+      },
     },
   },
   variants: {
@@ -56,7 +59,6 @@ export default {
   },
   plugins: [
     "vue",
-    twScrollbar,
   ],
   layers: {
     components: {},
