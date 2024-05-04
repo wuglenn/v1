@@ -16,16 +16,6 @@ const arrowClass = computed(() => ({
   "translate-x-2": isHovered.value,
 }));
 
-onBeforeRouteLeave((to, from, next) => {
-  const scrollPosition = {
-    left: window.scrollX,
-    top: window.scrollY,
-  };
-
-  to.meta.scrollPosition = scrollPosition;
-
-  next();
-});
 </script>
 
 <template>
