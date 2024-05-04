@@ -9,12 +9,12 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "glenn wu",
       component: HomeView,
     },
     {
       path: "/archive",
-      name: "archive",
+      name: "archive | glenn wu",
       component: () => import("@/views/ProjectArchiveView.vue"),
     },
     // {
@@ -34,6 +34,11 @@ const router = createRouter({
       return scrollPositionStore.getPosition(to);
     }
   },
+});
+
+router.beforeEach((to, from, next) => {
+  document.title = to.name;
+  next()
 });
 
 export default router;

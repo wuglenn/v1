@@ -10,30 +10,23 @@ const emit = defineEmits(["scrollToSection"]);
       with toys and other household gadgets trying to understand their inner workings. This drive
       has never faltered and I've gained a passion for software development and
       <span
-        class="text-theme-700 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300 transition cursor-pointer"
-        @click="emit('scrollToSection', 'projects')"
-        >deep learning</span
-      >, they're my new cooler toys.
+        class="text-theme-700/70 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300 transition cursor-pointer"
+        @click="emit('scrollToSection', 'projects')">deep learning</span>, they're my new cooler toys.
     </p>
     <p class="mt-3">
       Currently, I'm in my final year of
       <span
-        class="text-theme-700 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300 transition cursor-pointer"
-        @click="emit('scrollToSection', 'education')"
-        >Polytechnic</span
-      >
+        class="text-theme-700/70 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300 transition cursor-pointer"
+        @click="emit('scrollToSection', 'education')">Polytechnic</span>
       studies doing an internship with
       <span
-        class="text-theme-700 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300 transition cursor-pointer"
-        @click="emit('scrollToSection', 'experience')"
-        >Oracle</span
-      >, creating internal tools and processes to address the pain-points within the local team.
+        class="text-theme-700/70 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300 transition cursor-pointer"
+        @click="emit('scrollToSection', 'experience')">Oracle</span>, creating internal tools and processes to address
+      the pain-points within the local team.
       Outside of work and studies, I'm a proud member of the
       <span
-        class="text-theme-700 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300 transition cursor-pointer"
-      >
-        <a href="https://instagram.com/sp.riteclub" target="_blank"> robotics club </a></span
-      >
+        class="text-theme-700/70 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300 transition cursor-pointer">
+        <a href="https://instagram.com/sp.riteclub" target="_blank"> robotics club </a></span>
       where we work to create robots that compete at the international level.
     </p>
   </div>
