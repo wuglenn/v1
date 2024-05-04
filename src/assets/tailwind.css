@@ -673,6 +673,10 @@ label {
   margin-top: -0.25rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .mb-\[50px\] {
   margin-bottom: 50px;
 }
@@ -823,10 +827,6 @@ label {
 
 .w-\[2px\] {
   width: 2px;
-}
-
-.w-\[50px\] {
-  width: 50px;
 }
 
 .w-full {
@@ -1521,8 +1521,20 @@ label {
     width: 50%;
   }
 
+  .lg\:w-\[190px\] {
+    width: 190px;
+  }
+
+  .lg\:w-\[250px\] {
+    width: 250px;
+  }
+
   .lg\:w-\[60\%\] {
     width: 60%;
+  }
+
+  .lg\:w-\[70px\] {
+    width: 70px;
   }
 
   .lg\:w-\[800px\] {

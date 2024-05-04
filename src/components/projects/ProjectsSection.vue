@@ -7,37 +7,11 @@ import BaseCardSection from "@/components/ui/BaseCardSection.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
-const projectsCards = ref([
-  {
-    startDate: "May 2024",
-    // endDate: "Jan 2025",
-    title1: "me.glennwu.com (you're here!)",
-    // title2: "Oracle",
-    website: "https://me.glennwu.com/",
-    description: "The latest version of my portfolio site. Made from scratch with Vue 3 and Vite.",
-    tags: ["Vue", "TailwindCSS", "HTML", "CSS", "JavaScript"],
-  },
-  {
-    startDate: "Feb 2024",
-    // endDate: "Jan 2025",
-    title1: "Image Classification Web App",
-    // title2: "Oracle",
-    website: "https://devops-ca2.glennwu.com/",
-    description:
-      "A simple machine learning app made to classify images of vegetables. Built in Flask with a hosted TensorFlow Serving model. Created for a school assignment.",
-    tags: ["Python", "Flask", "TensorFlow", "TailwindCSS"],
-  },
-  {
-    startDate: "Feb 2024",
-    // endDate: "Jan 2025",
-    title1: "Exploring Deep Q-Networks",
-    // title2: "Oracle",
-    website: "https://devops-ca2.glennwu.com/",
-    description:
-      "An exploration of reinforcement learning techniques using the Pendulum environment on OpenAI's Gym. Created for a school assignment.",
-    tags: ["Python", "PyTorch"],
-  },
-]);
+import { projects } from "./projects";
+
+const projectsCards = ref(projects.filter(e => {
+  return e.main
+}));
 
 const isHovered = ref(false);
 

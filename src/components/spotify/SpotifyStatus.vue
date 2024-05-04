@@ -10,14 +10,16 @@ const spotifyStore = useSpotifyStore();
 const isUprightValue = ref(false);
 const showSVG = ref(true);
 
-// spotifyStore.updateCurrentSong({
-//   name: "",
-//   artist: "",
-//   isPlaying: false,
-//   albumArt: false,
-//   progress: 0,
-//   duration: 1,
-// });
+if (spotifyStore.currentSong == null) {
+  spotifyStore.updateCurrentSong({
+    name: "",
+    artist: "",
+    isPlaying: false,
+    albumArt: false,
+    progress: 0,
+    duration: 1,
+  });
+}
 
 const formatTime = (milliseconds) => {
   const minutes = Math.floor(milliseconds / 60000);

@@ -1,6 +1,8 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from "vue";
 
+import MultiTags from "./MultiTags.vue"
+
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 
@@ -113,14 +115,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    ref="cardRef"
+  <div ref="cardRef"
     class="w-full flex flex-col lg:flex-row items-start justify-start gap-1 lg:gap-4 hover:bg-theme-500/60 dark:hover:bg-theme-700/60 dark:hover:ring-2 dark:hover:ring-theme-700 p-2 sm:p-4 rounded relative transition duration-75"
-    :class="cardClasses"
-    @mouseover="onMouseOver"
-    @mouseleave="onMouseLeave"
-    @click="openLink"
-  >
+    :class="cardClasses" @mouseover="onMouseOver" @mouseleave="onMouseLeave" @click="openLink">
     <div class="top-0 left-0 absolute w-full h-full cursor-pointer"></div>
     <div class="uppercase sm:min-w-[150px] sm:max-w-[150px] text-xs sm:text-sm mt-1">
       {{ startDate }} <span v-if="formattedEndDate">—</span> {{ formattedEndDate }}
@@ -128,23 +125,11 @@ onMounted(() => {
     <div class="flex flex-col items-start justify-start">
       <div :class="titleClasses">
         {{ title1 }} <span v-if="title2">· {{ title2 }}</span>
-        <FontAwesomeIcon
-          v-if="website"
-          :icon="faLink"
-          class="text-base ms-1 transition duration-150"
-          :class="linkClass"
-        />
+        <FontAwesomeIcon v-if="website" :icon="faLink" class="text-base ms-1 transition duration-150"
+          :class="linkClass" />
       </div>
       <p class="text-sm sm:text-base">{{ description }}</p>
-      <ul v-if="tags.length > 0" class="flex flex-row flex-wrap gap-2 mt-3 text-sm">
-        <li
-          v-for="tag in tags"
-          :key="tag"
-          class="bg-violet-300 dark:bg-violet-900/50 px-3 py-1 rounded-full text-theme-950 dark:text-violet-200"
-        >
-          {{ tag }}
-        </li>
-      </ul>
+      <MultiTags class="mt-3" :tags="tags" />
     </div>
   </div>
 </template>
