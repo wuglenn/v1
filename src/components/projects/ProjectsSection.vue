@@ -47,8 +47,8 @@ const arrowClass = computed(() => ({
 
 onBeforeRouteLeave((to, from, next) => {
   const scrollPosition = {
-    left  : window.scrollX,
-    top: window.scrollY
+    left: window.scrollX,
+    top: window.scrollY,
   };
 
   to.meta.scrollPosition = scrollPosition;

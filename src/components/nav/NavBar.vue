@@ -1,12 +1,11 @@
 <script setup>
-
-import { ref, onMounted, onUnmounted } from "vue"
+import { ref, onMounted, onUnmounted } from "vue";
 
 import NavLink from "./NavLink.vue";
 
-const emit = defineEmits(["scrollToSection"])
+const emit = defineEmits(["scrollToSection"]);
 
-const currentSection = ref(null)
+const currentSection = ref(null);
 
 const onClick = (section) => {
   emit("scrollToSection", section);
@@ -38,7 +37,6 @@ onMounted(() => {
 onUnmounted(() => {
   document.removeEventListener("scroll", updateCurrentSection);
 });
-
 </script>
 
 <template>

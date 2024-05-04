@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
-import ProjectArchiveView from "@/views/ProjectArchiveView.vue";
+// import ProjectArchiveView from "@/views/ProjectArchiveView.vue";
 
 import { useScrollPositionStore } from "@/stores/scrollPosition";
 
@@ -15,7 +15,7 @@ const router = createRouter({
     {
       path: "/archive",
       name: "archive",
-      component: ProjectArchiveView,
+      component: () => import("@/views/ProjectArchiveView.vue"),
     },
     // {
     //   path: "/about",

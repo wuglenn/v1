@@ -10,14 +10,14 @@ const spotifyStore = useSpotifyStore();
 const isUprightValue = ref(false);
 const showSVG = ref(true);
 
-spotifyStore.updateCurrentSong({
-  name: "",
-  artist: "",
-  isPlaying: false,
-  albumArt: false,
-  progress: 1,
-  duration: 1,
-});
+// spotifyStore.updateCurrentSong({
+//   name: "",
+//   artist: "",
+//   isPlaying: false,
+//   albumArt: false,
+//   progress: 0,
+//   duration: 1,
+// });
 
 const formatTime = (milliseconds) => {
   const minutes = Math.floor(milliseconds / 60000);
@@ -53,7 +53,7 @@ onUnmounted(() => {
 });
 
 const toggleUpright = () => {
-  setTimeout(() => {}, 200);
+  setTimeout(() => { }, 200);
   isUprightValue.value = !isUprightValue.value;
 };
 
@@ -68,38 +68,25 @@ const showSVGAgain = () => {
 
 <template>
   <div class="flex items-center justify-center font-sofia text-center">
-    <div
-      v-if="currentSong"
-      class="text-white bg-black/70 dark:bg-black/50 p-4 rounded-2xl ring-spotify ring-4 min-w-[calc(100vw-40px)] sm:min-w-[500px]"
-    >
-      <div
-        class="flex items-center justify-center gap-2 sm:gap-4 relative"
-        :class="{ 'flex-col': isUpright, 'flex-row': isUpright }"
-      >
+    <div v-if="currentSong"
+      class="text-white bg-black/70 dark:bg-black/50 p-4 rounded-2xl ring-spotify ring-4 min-w-[calc(100vw-40px)] sm:min-w-[500px]">
+      <div class="flex items-center justify-center gap-2 sm:gap-4 relative"
+        :class="{ 'flex-col': isUpright, 'flex-row': isUpright }">
         <div
           class="text-sm xs:text-lg sm:text-xl top-0.5 sm:top-0 left-0.5 sm:left-0 text-white absolute cursor-pointer transition-transform"
-          :class="{ 'rotate-90': isUpright }"
-          @click="toggleUpright"
-        >
+          :class="{ 'rotate-90': isUpright }" @click="toggleUpright">
           <div
-            class="w-6 min-w-6 h-6 min-h-6 xs:w-7 xs:min-w-7 xs:h-7 xs:min-h-7 sm:w-8 sm:min-w-8 sm:h-8 sm:min-h-8 rounded-full hover:bg-white/20 flex justify-center items-center transition-colors"
-          >
+            class="w-6 min-w-6 h-6 min-h-6 xs:w-7 xs:min-w-7 xs:h-7 xs:min-h-7 sm:w-8 sm:min-w-8 sm:h-8 sm:min-h-8 rounded-full hover:bg-white/20 flex justify-center items-center transition-colors">
             <FontAwesomeIcon :icon="faChevronRight" />
           </div>
         </div>
         <div :class="isUpright ? 'order-first' : 'order-last'">
           <div :class="{ playing: currentSong.isPlaying && !isUpright }" class="relative">
-            <img
-              v-if="currentSong.albumArt.url"
-              :src="currentSong.albumArt.url"
-              :alt="currentSong.name"
-              @mouseover="hideSVG"
-              @mouseleave="showSVGAgain"
-              :class="{
+            <img v-if="currentSong.albumArt.url" :src="currentSong.albumArt.url" :alt="currentSong.name"
+              @mouseover="hideSVG" @mouseleave="showSVGAgain" :class="{
                 'h-60 w-60 min-h-60 min-w-60 rounded-2xl': isUpright,
                 'h-20 w-20 min-h-20 min-w-20 rounded-full': !isUpright,
-              }"
-            />
+              }" />
             <div v-else>
               <svg v-if="isUpright" height="240" width="240">
                 <circle r="120" cx="120" cy="120" fill="#222" />
@@ -125,14 +112,11 @@ const showSVGAgain = () => {
           <h4 v-if="isUpright" class="text-base sm:text-lg -mt-1">{{ currentSong.artist }}</h4>
           <div>
             <div
-              class="flex flex-row w-full items-center justify-center gap-2 text-sm text-neutral-400 sm:min-w-[250px]"
-            >
+              class="flex flex-row w-full items-center justify-center gap-2 text-sm text-neutral-400 sm:min-w-[250px]">
               <div>{{ formatTime(currentSong.progress) }}</div>
               <div class="flex-1 bg-neutral-700/60 h-1 relative rounded-full">
-                <div
-                  class="bg-white h-full absolute rounded-full left-0 top-0 transition-all duration-200"
-                  :style="{ width: (currentSong.progress / currentSong.duration) * 100 + '%' }"
-                ></div>
+                <div class="bg-white h-full absolute rounded-full left-0 top-0 transition-all duration-200"
+                  :style="{ width: (currentSong.progress / currentSong.duration) * 100 + '%' }"></div>
               </div>
               <div>{{ formatTime(currentSong.duration) }}</div>
             </div>

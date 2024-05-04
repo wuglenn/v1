@@ -7,7 +7,6 @@ import MouseCircle from "@/components/ui/MouseCircle.vue";
 // import HelloWorld from './components/HelloWorld.vue'
 
 // import "./css/main.css";
-
 </script>
 
 <template>

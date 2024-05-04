@@ -24,11 +24,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div
-    ref="circleElement"
-    class="circle"
-    :style="{ transform: `translate(${circlePosition.x}px, ${circlePosition.y}px)` }"
-  ></div>
+  <div ref="circleElement" class="circle"
+    :style="{ transform: `translate(${circlePosition.x}px, ${circlePosition.y}px)` }"></div>
 </template>
 
 <style scoped>
@@ -39,11 +36,9 @@ onUnmounted(() => {
   width: 1000px;
   height: 1000px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle at center,
-    rgba(55, 0, 128, 0.233) 0%,
-    rgba(108, 18, 136, 0) 70%
-  );
+  background: radial-gradient(circle at center,
+      rgba(55, 0, 128, 0.233) 0%,
+      rgba(108, 18, 136, 0) 70%);
   pointer-events: none;
   z-index: 0;
   transform: translate(-50%, -50%);

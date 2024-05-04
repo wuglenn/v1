@@ -5,14 +5,13 @@ import { RouterLink } from "vue-router";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-import ScrollState from "@/components/state/ScrollState.vue"
+import ScrollState from "@/components/state/ScrollState.vue";
 
 const isHovered = ref(false);
 
 const arrowClass = computed(() => ({
   "-translate-x-2": isHovered.value,
 }));
-
 </script>
 
 <template>
@@ -22,8 +21,7 @@ const arrowClass = computed(() => ({
         <div class="flex flex-col w-full justify-start">
           <RouterLink to="/" class="p-2 text-lg font-semibold flex items-center justify-start gap-1"
             @mouseover="isHovered = true" @mouseleave="isHovered = false">
-            <FontAwesomeIcon :icon="faArrowLeft" class="transition" :class="arrowClass" />Glenn
-            Wu
+            <FontAwesomeIcon :icon="faArrowLeft" class="transition" :class="arrowClass" />Glenn Wu
           </RouterLink>
           <h1 class="font-bold text-5xl text-theme-700 dark:text-violet-50">All Projects</h1>
         </div>

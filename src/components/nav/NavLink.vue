@@ -49,12 +49,8 @@ function onClick() {
 
 <template>
   <div>
-    <div
-      @mouseover="onMouseover"
-      @mouseleave="onMouseleave"
-      @click="onClick"
-      class="flex flex-row justify-start py-1 gap-3 cursor-pointer font-semibold"
-    >
+    <div @mouseover="onMouseover" @mouseleave="onMouseleave" @click="onClick"
+      class="flex flex-row justify-start py-1 gap-3 cursor-pointer font-semibold">
       <div class="relative transition-all duration-200" :style="{ width: lineWidth }">
         <div class="absolute top-1/2 h-[1px] w-full" :class="lineCol"></div>
       </div>

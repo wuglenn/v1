@@ -9,7 +9,6 @@
     "deploy": "vercel --prod",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/",
     "build:tailwind": "npx tailwindcss -i ./globals.css -o ./src/assets/tailwind.css"
   },
   "dependencies": {

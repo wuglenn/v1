@@ -13,7 +13,7 @@ import NavBar from "@/components/nav/NavBar.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 
-import ScrollState from "@/components/state/ScrollState.vue"
+import ScrollState from "@/components/state/ScrollState.vue";
 
 const scrollToSection = (section) => {
   const sectionElement = document.querySelector(`#${section}`);
@@ -21,7 +21,6 @@ const scrollToSection = (section) => {
     sectionElement.scrollIntoView({ behavior: "smooth" });
   }
 };
-
 </script>
 
 <template>
