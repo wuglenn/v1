@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed } from "vue";
+import { RouterLink, onBeforeRouteLeave } from "vue-router";
 
 import BaseCardSection from "@/components/ui/BaseCardSection.vue";
 
@@ -43,18 +44,29 @@ const isHovered = ref(false);
 const arrowClass = computed(() => ({
   "translate-x-2": isHovered.value,
 }));
+
+onBeforeRouteLeave((to, from, next) => {
+  const scrollPosition = {
+    left  : window.scrollX,
+    top: window.scrollY
+  };
+
+  to.meta.scrollPosition = scrollPosition;
+
+  next();
+});
 </script>
 
 <template>
   <BaseCardSection :cards="projectsCards" />
   <ul
     class="px-2 sm:px-4 mt-6 font-semibold text-lg lg:text-xl flex flex-col sm:flex-row gap-4 items-start sm:items-center ms-0">
-    <a href="/archive" @mouseover="isHovered = true" @mouseleave="isHovered = false">
+    <RouterLink to="/archive" @mouseover="isHovered = true" @mouseleave="isHovered = false">
       <div
         class="transition text-theme-950 hover:text-theme-950/60 dark:text-violet-50 dark:hover:text-violet-50/80 rounded-full flex justify-center items-center gap-2">
         <span>View Full Project Archive</span>
         <FontAwesomeIcon :icon="faArrowRightLong" class="text-lg lg:text-xl transition" :class="arrowClass" />
       </div>
-    </a>
+    </RouterLink>
   </ul>
 </template>

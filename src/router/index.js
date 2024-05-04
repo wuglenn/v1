@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import HomeView from "@/views/HomeView.vue";
+import ProjectArchiveView from "@/views/ProjectArchiveView.vue";
+
+import { useScrollPositionStore } from "@/stores/scrollPosition";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,7 +15,7 @@ const router = createRouter({
     {
       path: "/archive",
       name: "archive",
-      component: HomeView,
+      component: ProjectArchiveView,
     },
     // {
     //   path: "/about",
@@ -23,6 +26,14 @@ const router = createRouter({
     //   component: () => import("../views/AboutView.vue")
     // }
   ],
+  scrollBehavior(to, from, savedPosition) {
+    const scrollPositionStore = useScrollPositionStore();
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return scrollPositionStore.getPosition(to);
+    }
+  },
 });
 
 export default router;

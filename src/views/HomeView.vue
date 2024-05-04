@@ -6,13 +6,14 @@ import EducationSection from "@/components/education/EducationSection.vue";
 import ProjectsSection from "@/components/projects/ProjectsSection.vue";
 
 import SpotifyStatus from "@/components/spotify/SpotifyStatus.vue";
-import MouseCircle from "@/components/ui/MouseCircle.vue";
 
 import SocialLinks from "@/components/SocialLinks.vue";
 import NavBar from "@/components/nav/NavBar.vue";
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
+
+import ScrollState from "@/components/state/ScrollState.vue"
 
 const scrollToSection = (section) => {
   const sectionElement = document.querySelector(`#${section}`);
@@ -93,6 +94,6 @@ const scrollToSection = (section) => {
         </div>
       </div>
     </div>
-    <MouseCircle />
+    <ScrollState />
   </main>
 </template>

@@ -1,11 +1,13 @@
 <script setup>
 import { RouterView } from "vue-router";
 import { SpeedInsights } from "@vercel/speed-insights/vue";
+import MouseCircle from "@/components/ui/MouseCircle.vue";
 // import ConstructionBanner from "@/components/general/ConstructionBanner.vue"
 // import { RouterLink, RouterView } from 'vue-router'
 // import HelloWorld from './components/HelloWorld.vue'
 
 // import "./css/main.css";
+
 </script>
 
 <template>
@@ -25,6 +27,7 @@ import { SpeedInsights } from "@vercel/speed-insights/vue";
   <SpeedInsights />
 
   <RouterView />
+  <MouseCircle />
 </template>
 
 <style scoped></style>
