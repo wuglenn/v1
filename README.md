@@ -1,7 +1,7 @@
 <h1 align="center">
   me.glennwu.com
 </h1>
-<p align="center">My first "complete" personal site. Built with <a href="https://vuejs.org/" target="_blank">Vue.js</a> and <a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a>. Available at <a href="https://me.glennwu.com" target="_blank">me.glennwu.com</a>.</p>
+<p align="center">My first "complete" personal site. Built with <a href="https://vuejs.org/" target="_blank">Nuxt.js</a> and <a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a>. Available at <a href="https://me.glennwu.com" target="_blank">me.glennwu.com</a>.</p>
 
 ![demo](images/demo.png)
 
