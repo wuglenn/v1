@@ -73,6 +73,7 @@ const unHovered = () => {
       :website="card.website"
       :description="card.description"
       :tags="card.tags"
+      :image="card.image"
     />
   </div>
 </template>
