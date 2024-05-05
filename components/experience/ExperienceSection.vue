@@ -39,6 +39,7 @@ const jobCards = [
 </script>
 
 <template>
+  <div class="block lg:hidden px-2 sm:px-4 text-theme-950 dark:text-violet-50 font-semibold text-xl mb-2">Experience</div>
   <BaseCardSection :cards="jobCards" />
   <ul
     class="px-2 sm:px-4 mt-6 font-semibold text-lg lg:text-xl flex flex-col sm:flex-row gap-4 items-start sm:items-center ms-0">

@@ -34,5 +34,6 @@ const educationCards = [
 </script>
 
 <template>
+  <div class="block lg:hidden px-2 sm:px-4 text-theme-950 dark:text-violet-50 font-semibold text-xl mb-2">Education</div>
   <BaseCardSection :cards="educationCards" />
 </template>
