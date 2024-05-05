@@ -123,11 +123,14 @@ onMounted(() => {
 <template>
   <div ref="cardRef"
     class="w-full flex items-start justify-start hover:bg-theme-500/60 dark:hover:bg-theme-700/60 dark:hover:ring-2 dark:hover:ring-theme-700 p-2 sm:p-4 rounded relative transition duration-75"
-    :class="image ? 'sm:flex-row sm:gap-4 flex-col' : 'flex-col lg:flex-row gap-1 lg:gap-4', cardClasses" @mouseover="onMouseOver"
-    @mouseleave="onMouseLeave" @click="openLink">
+    :class="image ? 'sm:flex-row sm:gap-4 flex-col' : 'flex-col lg:flex-row gap-1 lg:gap-4', cardClasses"
+    @mouseover="onMouseOver" @mouseleave="onMouseLeave" @click="openLink">
     <div class="top-0 left-0 absolute w-full h-full cursor-pointer"></div>
-    <div v-if="image" class="uppercase min-w-[200px] max-w-[200px] sm:min-w-[150px] sm:max-w-[150px] text-xs sm:text-sm mt-1 order-last sm:-order-1">
-      <img :src="image" class="mt-4 sm:mt-2 rounded ring-2 ring-theme-700 dark:ring-theme-500 transition" :class="imgClass">
+    <div v-if="image"
+      class="uppercase min-w-[200px] max-w-[200px] sm:min-w-[150px] sm:max-w-[150px] text-xs sm:text-sm mt-1 order-last sm:-order-1">
+      <NuxtImg format="webp" :src="image"
+        class="mt-4 sm:mt-2 rounded ring-2 ring-theme-700 dark:ring-theme-500 transition" :class="imgClass"
+        loading="lazy" width="200" />
     </div>
     <div v-else class="uppercase sm:min-w-[150px] sm:max-w-[150px] text-xs sm:text-sm mt-1">
       <span>

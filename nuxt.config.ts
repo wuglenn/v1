@@ -9,14 +9,14 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', "@pinia/nuxt"],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/color-mode', "@pinia/nuxt", "@nuxt/image"],
   app: {
     // buildAssetsDir: '/public/',
     head: {
         charset: 'utf-8',
         viewport: 'width=device-width, initial-scale=1',
         // htmlAttrs: { dir: 'rtl', lang: 'fa' },
-        link: [{ rel: 'icon', type: 'image/png', href: "/portrait_500px.png" }]
+        link: [{ rel: 'icon', type: 'image/png', href: "/portrait.png" }]
     },
 },
 });
