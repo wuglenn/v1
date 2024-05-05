@@ -1,11 +1,12 @@
 <script setup>
-import { ref } from "vue";
-
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+</script>
 
-const jobCards = ref([
+<script>
+
+const jobCards = [
   {
     startDate: "Apr 2024",
     endDate: "Jan 2025",
@@ -34,7 +35,7 @@ const jobCards = ref([
     description: "",
     tags: ["Robotics", "EV3"],
   },
-]);
+];
 </script>
 
 <template>

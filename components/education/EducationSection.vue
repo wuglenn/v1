@@ -1,7 +1,5 @@
 <script setup>
-import { ref } from "vue";
-
-const educationCards = ref([
+const educationCards = [
   {
     startDate: "Apr 2022",
     endDate: "Apr 2025",
@@ -32,7 +30,7 @@ const educationCards = ref([
     // description: "L1R5: 7 (net)",
     // skills: ["CAD", "Fusion 360", "Unity", "C#"]
   },
-]);
+];
 </script>
 
 <template>
