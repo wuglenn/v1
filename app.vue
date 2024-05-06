@@ -11,10 +11,9 @@ config.autoAddCss = false; /* eslint-disable import/first */
 </script>
 
 <template>
-  <div class="font-sofia bg-violet-50 dark:bg-theme-950 text-theme-950 dark:text-theme-500 min-h-screen scrollbar-hide">
+  <div class="font-sofia bg-violet-50 dark:bg-theme-950 text-theme-950 dark:text-theme-500 min-h-screen">
     <NuxtPage />
     <UiMouseCircle />
     <ChatBot />
-    <SpeedInsights />
   </div>
 </template>

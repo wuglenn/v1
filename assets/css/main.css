@@ -1,3 +1,18 @@
 .font-sofia {
   font-family: "Sofia Pro", Helvetica, sans-serif;
 }
+
+/* Hide Scrollbars */
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+html::-webkit-scrollbar,
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+html,
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
