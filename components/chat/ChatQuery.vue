@@ -9,6 +9,6 @@ const props = defineProps({
 
 <template>
   <div class="float-right">
-    <div class="px-3 py-1 text-violet-50 bg-theme-950 rounded-2xl font-medium max-w-[250px]">{{ props.query }}</div>
+    <div class="px-3 py-1 text-violet-50 bg-theme-950 rounded-2xl max-w-[250px]">{{ props.query }}</div>
   </div>
 </template>

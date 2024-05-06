@@ -69,14 +69,15 @@ const scrollWithMsg = () => {
 </script>
 
 <template>
-  <div class="relative top-[100px] h-[calc(100%-100px)] w-full overflow-y-scroll flex flex-col" id="scroller">
-    <div class="mt-[10px] mx-[10px] flex flex-col gap-2 grow">
+  <div class="relative top-[100px] h-[calc(100%-100px)] w-full overflow-y-scroll scrollbar-hide flex flex-col"
+    id="scroller">
+    <div class="mt-[10px] mx-[10px] flex flex-col gap-1 grow">
       <div v-for="(chat, index) in chatHistory" :key="index">
         <ChatResponse v-if="chat.isBot" :response=chat.text />
         <ChatQuery v-else :query=chat.text @click="chat.text" />
       </div>
     </div>
-    <div class="mx-[10px] mb-[10px] flex flex-row-reverse flex-wrap gap-2 mt-2">
+    <div class="p-[10px] flex flex-row-reverse flex-wrap gap-2 mt-2" :class="{'bg-theme-700/50': userOptions.length > 0}">
       <ChatOption v-for="(option, index) in userOptions" :key="index" :option="option" @click="chooseOption(option)" />
     </div>
   </div>
