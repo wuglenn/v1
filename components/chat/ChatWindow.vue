@@ -4,9 +4,9 @@ const userOptions = ref([]);
 
 const initialResponse = ["Hi, how can I help you today?"];
 
-const possibleQueries = { "Hi, how can I help you today?": ["Just saying hi!", "We'd like to hire you"], "Can I help you with anything else?": ["Just saying hi!", "We'd like to hire you"] };
+const possibleQueries = { "Hi, how can I help you today?": ["Just saying hi!", "We'd like to hire you"], "Can I help you with anything else?": ["Just saying hi!", "We'd like to hire you"], "Sure, here you go": ["Just saying hi!", "We'd like to hire you"], "Send me a message and lets chat further!": ["Other options?"] };
 
-const possibleResponses = { "Just saying hi!": ["Hello!", "Thanks for saying hi 😁", "I hope you've enjoyed browsing my work", "Can I help you with anything else?"], "We'd like to hire you": ["Awesome!"] };
+const possibleResponses = { "Just saying hi!": ["Hello!", "Thanks for saying hi 😁", "I hope you've enjoyed browsing my work", "Can I help you with anything else?"], "We'd like to hire you": ["Awesome!", "Send me a message and lets chat further!"], "Other options?": ["Sure, here you go"] };
 
 const DELAY = 20;
 
