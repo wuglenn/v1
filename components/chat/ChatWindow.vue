@@ -75,10 +75,9 @@ const scrollWithMsg = () => {
         <ChatResponse v-if="chat.isBot" :response=chat.text />
         <ChatQuery v-else :query=chat.text @click="chat.text" />
       </div>
-      <div class="mx-[10px] mb-[10px] flex flex-row-reverse flex-wrap gap-2 mt-2">
-        <ChatOption v-for="(option, index) in userOptions" :key="index" :option="option"
-          @click="chooseOption(option)" />
-      </div>
+    </div>
+    <div class="mx-[10px] mb-[10px] flex flex-row-reverse flex-wrap gap-2 mt-2">
+      <ChatOption v-for="(option, index) in userOptions" :key="index" :option="option" @click="chooseOption(option)" />
     </div>
   </div>
 </template>
