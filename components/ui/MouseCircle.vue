@@ -39,12 +39,21 @@ onUnmounted(() => {
   width: 1000px;
   height: 1000px;
   border-radius: 50%;
-  background: radial-gradient(circle at center,
-      rgba(55, 0, 128, 0.233) 0%,
-      rgba(108, 18, 136, 0) 70%);
   pointer-events: none;
   z-index: 0;
   transform: translate(-50%, -50%);
   transition: transform 0.2s ease-out;
+}
+
+.light-mode .circle {
+  background: radial-gradient(circle at center,
+      rgba(196, 181, 253, 0.1) 0%,
+      rgba(108, 18, 136, 0) 70%);
+}
+
+.dark-mode .circle {
+  background: radial-gradient(circle at center,
+      rgba(55, 0, 128, 0.3) 0%,
+      rgba(108, 18, 136, 0) 70%);
 }
 </style>

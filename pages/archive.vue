@@ -18,12 +18,12 @@ const arrowClass = computed(() => ({
         <div class="flex flex-col w-full justify-start">
           <div class="flex">
             <NuxtLink to="/"
-              class="p-2 text-lg font-semibold flex items-center justify-start gap-1 text-theme-500 dark:text-violet-300 grow-0"
+              class="p-2 text-lg font-semibold flex items-center justify-start gap-1 text-light-highlight dark:text-dark-highlight grow-0"
               @mouseover="isHovered = true" @mouseleave="isHovered = false">
               <FontAwesomeIcon :icon="faArrowLeft" class="transition" :class="arrowClass" />Glenn Wu
             </NuxtLink>
           </div>
-          <h1 class="font-bold text-5xl text-theme-700 dark:text-violet-50">All Projects</h1>
+          <h1 class="font-bold text-5xl text-light-primary dark:text-dark-primary">All Projects</h1>
         </div>
         <ProjectsTable class="font-medium mt-10 lg:mt-20" />
       </div>

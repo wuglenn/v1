@@ -9,7 +9,7 @@ const props = defineProps({
 
 <template>
   <div class="float-left">
-    <div class="px-3 py-1 bg-violet-50 text-theme-950 rounded-2xl max-w-[250px]">
+    <div class="px-3 py-1 bg-light-bg text-light-primary rounded-2xl max-w-[250px] md:max-w-[350px]">
       <a v-if="props.response.includes('message') && props.response.includes('me')" href="mailto:glennwuwu@gmail.com"
         class="underline">
         {{ props.response }}

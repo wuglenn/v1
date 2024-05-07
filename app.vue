@@ -9,7 +9,7 @@ config.autoAddCss = false; /* eslint-disable import/first */
 </script>
 
 <template>
-  <div class="font-sofia bg-violet-50 dark:bg-theme-950 text-theme-950 dark:text-theme-500 min-h-screen">
+  <div class="font-sofia bg-light-bg dark:bg-dark-bg text-light-secondary dark:text-dark-secondary min-h-screen">
     <NuxtPage />
     <UiMouseCircle />
     <ChatBot />

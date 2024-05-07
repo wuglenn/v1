@@ -55,26 +55,12 @@ const unHovered = () => {
 </script>
 
 <template>
-  <div
-    class="flex flex-col gap-4 lg:gap-8 items-start justify-start"
-    @mouseover="hovered"
-    @mouseleave="unHovered"
-  >
-    <BaseCard
-      v-for="(card, index) in props.cards"
-      :key="index"
-      :class="{ blurred: !hoveredCard.includes(index) && hoveredCard.length >= 1 }"
-      @card-hover="onCardHover(index)"
-      @card-unhover="onCardUnhover(index)"
-      :start-date="card.startDate"
-      :end-date="card.endDate"
-      :title1="card.title1"
-      :title2="card.title2"
-      :website="card.website"
-      :description="card.description"
-      :tags="card.tags"
-      :image="card.image"
-    />
+  <div class="flex flex-col gap-4 lg:gap-8 items-start justify-start" @mouseover="hovered" @mouseleave="unHovered">
+    <BaseCard v-for="(card, index) in props.cards" :key="index"
+      :class="{ 'blur-[1px] brightness-90 dark:brightness-50': !hoveredCard.includes(index) && hoveredCard.length >= 1 }"
+      @card-hover="onCardHover(index)" @card-unhover="onCardUnhover(index)" :start-date="card.startDate"
+      :end-date="card.endDate" :title1="card.title1" :title2="card.title2" :website="card.website"
+      :description="card.description" :tags="card.tags" :image="card.image" />
   </div>
 </template>
 

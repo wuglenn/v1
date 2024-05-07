@@ -74,9 +74,9 @@ const showSVGAgain = () => {
 
 <template>
   <ClientOnly>
-    <div class="flex items-center justify-center font-sofia text-center">
+    <div class=" font-sofia text-center">
       <div v-if="currentSong"
-        class="text-white bg-black/70 dark:bg-black/50 p-4 rounded-2xl ring-spotify ring-4 min-w-[calc(100vw-40px)] sm:min-w-[500px]">
+        class="text-white bg-black/50 dark:bg-transparent ring-4 dark:ring-2 ring-spotify dark:ring-theme-700 shadow-md p-4 rounded-xl min-w-[calc(100vw-40px)] sm:min-w-[500px]">
         <div class="flex items-center justify-center gap-2 sm:gap-4 relative"
           :class="{ 'flex-col': isUpright, 'flex-row': isUpright }">
           <div
@@ -119,9 +119,9 @@ const showSVGAgain = () => {
             <h4 v-if="isUpright" class="text-base sm:text-lg -mt-1">{{ currentSong.artist }}</h4>
             <div>
               <div
-                class="flex flex-row w-full items-center justify-center gap-2 text-sm text-neutral-400 sm:min-w-[250px]">
+                class="flex flex-row w-full items-center justify-center gap-2 text-sm text-white dark:text-neutral-400 sm:min-w-[250px]">
                 <div>{{ formatTime(currentSong.progress) }}</div>
-                <div class="flex-1 bg-neutral-700/60 h-1 relative rounded-full">
+                <div class="flex-1 bg-neutral-700 dark:bg-neutral-700/60 h-1 relative rounded-full">
                   <div class="bg-white h-full absolute rounded-full left-0 top-0 transition-all duration-200"
                     :style="{ width: (currentSong.progress / currentSong.duration) * 100 + '%' }"></div>
                 </div>
@@ -139,6 +139,11 @@ const showSVGAgain = () => {
 </template>
 
 <style scoped>
+.bg-spotify-gradient {
+  background: rgb(115, 255, 171);
+  background: linear-gradient(90deg, rgba(115, 255, 171, 0.5) 0%, rgba(105, 230, 255, 0.5) 100%);
+}
+
 .playing {
   -webkit-animation: spin 12s linear infinite;
   -moz-animation: spin 12s linear infinite;

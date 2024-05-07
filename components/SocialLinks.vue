@@ -20,27 +20,28 @@ const justifyClass = computed(() => {
 });
 </script>
 <template>
-  <div class="flex flex-row gap-4 items-center" :class="justifyClass">
+  <div class="flex flex-row gap-4 items-center text-light-secondary dark:text-dark-secondary" :class="justifyClass">
     <a
       href="https://github.com/glennwuwu"
       target="blank_"
-      class="hover:text-violet-50 transition duration-100"
+      class="hover:text-light-primary  dark:hover:text-dark-primary transition duration-100"
     >
       <FontAwesomeIcon :icon="faGithub" class="" />
     </a>
     <a
       href="https://linkedin.com/in/glennwuwu"
       target="blank_"
-      class="hover:text-violet-50 transition duration-100"
+      class="hover:text-light-primary  dark:hover:text-dark-primary transition duration-100"
     >
       <FontAwesomeIcon :icon="faLinkedin" class="" />
     </a>
     <a
       href="https://instagram.com/glwuu"
       target="blank_"
-      class="hover:text-violet-50 transition duration-100"
+      class="hover:text-light-primary dark:hover:text-dark-primary transition duration-100"
     >
       <FontAwesomeIcon :icon="faInstagram" class="" />
     </a>
+    <UiDarkModeToggle/>
   </div>
 </template>

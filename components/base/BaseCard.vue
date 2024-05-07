@@ -42,7 +42,7 @@ const props = defineProps({
 const currentDate = ref(new Date());
 const isHovered = ref(false);
 const linkClass = ref("rotate-0 opacity-0");
-const imgClass = ref("brightness-75")
+const imgClass = ref("brightness-90 dark:brightness-75")
 const cardRef = ref(null);
 
 const formattedEndDate = computed(() => {
@@ -58,8 +58,8 @@ const cardClasses = computed(() => ({
 }));
 
 const titleClasses = computed(() => ({
-  "text-violet-600 dark:text-violet-300": isHovered.value,
-  "text-theme-950 dark:text-violet-50": !isHovered.value,
+  "text-light-highlight dark:text-dark-highlight": isHovered.value,
+  "text-light-primary dark:text-dark-primary": !isHovered.value,
 }));
 
 const openLink = () => {
@@ -80,7 +80,7 @@ const onMouseOver = () => {
 const onMouseLeave = () => {
   isHovered.value = false;
   linkClass.value = "rotate-0 opacity-0";
-  imgClass.value = "brightness-75"
+  imgClass.value = "brightness-90 dark:brightness-75"
   emit("cardUnhover");
 };
 
@@ -122,15 +122,14 @@ onMounted(() => {
 
 <template>
   <div ref="cardRef"
-    class="w-full flex items-start justify-start hover:bg-theme-500/60 dark:hover:bg-theme-700/60 dark:hover:ring-2 dark:hover:ring-theme-700 p-2 sm:p-4 rounded relative transition duration-75"
+    class="w-full flex items-start justify-start hover:bg-light-secondary/10 dark:hover:bg-theme-700/60 dark:hover:ring-2 dark:hover:ring-theme-700 p-2 sm:p-4 rounded relative transition duration-75"
     :class="image ? 'sm:flex-row sm:gap-4 flex-col' : 'flex-col lg:flex-row gap-1 lg:gap-4', cardClasses"
     @mouseover="onMouseOver" @mouseleave="onMouseLeave" @click="openLink">
     <div class="top-0 left-0 absolute w-full h-full cursor-pointer"></div>
     <div v-if="image"
       class="uppercase min-w-[200px] max-w-[200px] sm:min-w-[150px] sm:max-w-[150px] text-xs sm:text-sm mt-1 order-last sm:-order-1">
-      <NuxtImg format="webp" :src="image"
-        class="mt-4 sm:mt-2 rounded ring-2 ring-theme-700 dark:ring-theme-500 transition" :class="imgClass"
-        loading="lazy" width="200" />
+      <NuxtImg format="webp" :src="image" class="mt-4 sm:mt-2 rounded ring-2 ring-dark-secondary transition"
+        :class="imgClass" loading="lazy" width="200" />
     </div>
     <div v-else class="uppercase sm:min-w-[150px] sm:max-w-[150px] text-xs sm:text-sm mt-1">
       <span>

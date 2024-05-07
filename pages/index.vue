@@ -18,12 +18,9 @@ const scrollToSection = (section) => {
           class="lg:w-[800px] xl:w-[1150px] flex flex-col lg:flex-row lg:items-start items-center justify-center min-h-screen">
           <div class="w-full lg:w-1/2 lg:sticky top-0 lg:h-screen lg:min-w-[400px]">
             <div
-              class="mt-10 lg:mt-[100px] relative dark:text-purple-50 lg:px-0 max-w-[600px] lg:max-w-full px-6 sm:px-8">
+              class="mt-10 lg:mt-[100px] relative text-light-primary dark:text-dark-primary lg:px-0 max-w-[600px] lg:max-w-full px-6 sm:px-8">
               <PersonalSection />
               <NavBar class="hidden lg:block text-base tracking-wide mt-10" @scroll-to-section="scrollToSection" />
-              <div class="block lg:hidden text-4xl mt-6">
-                <SocialLinks justify="start" />
-              </div>
             </div>
 
             <div class="bottom-[80px] hidden lg:block absolute text-2xl w-1/2">
@@ -61,15 +58,21 @@ const scrollToSection = (section) => {
             </div>
 
             <footer class="mt-10 lg:mt-28 mb-[50px] px-4">
+              <div class="block lg:hidden text-2xl mb-2">
+                <SocialLinks justify="start" />
+              </div>
               <div>
                 Built from scratch with
-                <span class="text-theme-700 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300">
+                <span
+                  class="text-light-primary hover:text-light-secondary dark:text-dark-primary dark:hover:text-dark-highlight">
                   <a href="https://nuxt.com/" target="_blank">Nuxt.js</a>
                 </span>
                 and
-                <span class="text-theme-700 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300">
+                <span
+                  class="text-light-primary hover:text-light-secondary dark:text-dark-primary dark:hover:text-dark-highlight">
                   <a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a> </span>, deployed with
-                <span class="text-theme-700 hover:text-theme-500 dark:text-violet-50 dark:hover:text-violet-300">
+                <span
+                  class="text-light-primary hover:text-light-secondary dark:text-dark-primary dark:hover:text-dark-highlight">
                   <a href="https://vercel.com/" target="_blank">Vercel</a> </span>.
               </div>
               <div class="flex gap-1 items-center mt-2 lg:hidden">

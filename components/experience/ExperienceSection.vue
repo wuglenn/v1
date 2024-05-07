@@ -39,13 +39,15 @@ const jobCards = [
 </script>
 
 <template>
-  <div class="block lg:hidden px-2 sm:px-4 text-theme-950 dark:text-violet-50 font-semibold text-xl mb-2">Experience</div>
+  <div class="block lg:hidden px-2 sm:px-4 text-light-primary dark:text-dark-primary font-semibold text-xl mb-2">
+    Experience
+  </div>
   <BaseCardSection :cards="jobCards" />
   <ul
     class="px-2 sm:px-4 mt-6 font-semibold text-lg lg:text-xl flex flex-col sm:flex-row gap-4 items-start sm:items-center ms-0">
     <a href="https://linkedin.com/in/glennwuwu" target="_blank">
       <div
-        class="text-theme-950 dark:text-violet-50 dark:hover:text-violet-50/80 transition flex justify-center items-center gap-2 py-2">
+        class="text-light-primary dark:text-dark-primary dark:hover:text-dark-primary/80 transition flex justify-center items-center gap-2 py-2">
         <span class="underline underline-offset-4 lg:no-underline">Let's connect!</span>
         <FontAwesomeIcon :icon="faLinkedin" class="" />
       </div>
@@ -53,7 +55,7 @@ const jobCards = [
     <!-- TODO: Upload resume file -->
     <a href="" target="_blank">
       <div
-        class="text-violet-50 bg-theme-950 dark:text-theme-700 transition px-4 py-2 dark:bg-violet-50 dark:hover:bg-violet-50/80 rounded-full flex justify-center items-center gap-2">
+        class="text-dark-primary bg-dark-bg hover:bg-dark-bg/90 dark:text-light-primary transition px-4 py-2 dark:bg-light-bg dark:hover:bg-violet-50/80 rounded-full flex justify-center items-center gap-2">
         <span>View Full Resume</span>
         <FontAwesomeIcon :icon="faArrowUpRightFromSquare" class="text-lg lg:text-xl" />
       </div>

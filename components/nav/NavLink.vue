@@ -22,15 +22,15 @@ const lineWidth = computed(() => {
 
 const lineCol = computed(() => {
   return {
-    "bg-theme-500": !isHovered.value && !props.isClicked,
-    "bg-violet-50": isHovered.value || props.isClicked,
+    "bg-light-secondary dark:bg-dark-secondary": !isHovered.value && !props.isClicked,
+    "bg-light-primary dark:bg-dark-primary": isHovered.value || props.isClicked,
   };
 });
 
 const textCol = computed(() => {
   return {
-    "text-theme-500": !isHovered.value && !props.isClicked,
-    "text-violet-50": isHovered.value || props.isClicked,
+    "text-light-secondary dark:text-dark-secondary": !isHovered.value && !props.isClicked,
+    "text-light-primary dark:text-dark-primary": isHovered.value || props.isClicked,
   };
 });
 
