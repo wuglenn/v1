@@ -11,7 +11,7 @@ const isHovered = ref(false);
 const colorMode = useColorMode()
 
 onMounted(() => {
-  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) || document.documentElement.classList.contains("dark-mode")) {
     isDarkMode.value = true;
   } else {
     isDarkMode.value = false;
@@ -27,13 +27,12 @@ function toggleDarkMode() {
     localStorage.theme = 'light';
     colorMode.preference = 'light'
   }
-  console.log(colorMode.preference)
 }
 </script>
 
 <template>
   <div
-    class="relative h-5 w-10 rounded-full ring-2 ring-light-secondary dark:ring-dark-secondary hover:ring-light-primary dark:hover:ring-dark-primary transition duration-300 "
+    class="relative h-5 w-10 rounded-full ring-2 ring-light-secondary dark:ring-dark-secondary hover:ring-light-primary dark:hover:ring-dark-primary transition duration-300 cursor-pointer"
     @click="toggleDarkMode" @mouseover="isHovered = true" @mouseleave="isHovered = false">
     <div class="m-0.5 relative">
       <div class="absolute h-4 aspect-square rounded-full transition"
