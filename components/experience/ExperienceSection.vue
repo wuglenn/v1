@@ -52,8 +52,7 @@ const jobCards = [
         <FontAwesomeIcon :icon="faLinkedin" class="" />
       </div>
     </a>
-    <!-- TODO: Upload resume file -->
-    <a href="" target="_blank">
+    <a href="/Resume.pdf" target="_blank">
       <div
         class="text-dark-primary bg-dark-bg hover:bg-dark-bg/90 dark:text-light-primary transition px-4 py-2 dark:bg-light-bg dark:hover:bg-violet-50/80 rounded-full flex justify-center items-center gap-2">
         <span>View Full Resume</span>
