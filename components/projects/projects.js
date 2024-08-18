@@ -3,7 +3,7 @@ export const projects = [
     startDate: "May 2024",
     title1: "me.glennwu.com (you're here!)",
     titleAlt: "Personal Website",
-    website: "https://me.glennwu.com/",
+    website: "https://www.glennwu.com/",
     websiteAlt: "me.glennwu.com",
     description: "The latest version of my portfolio site. Made from scratch with Nuxt.js.",
     image: "/images/portfolio_site.png",
